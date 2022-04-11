@@ -1,13 +1,13 @@
 raw: 0.9
 endpoint: GET
 metadata:
-  title: lichess ratings 
-  description: ratings of user on lichess per year-month
+  title: get treks
+  description: get treks 
   tags:
-    - chess  
+    - trek
 code: rql
 codeFile: code.rql
-declaration: user_monthly_stats_of_game_type
+declaration: fetch_star_treks
 security: 
   public: true
 format: json

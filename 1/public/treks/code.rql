@@ -1,0 +1,11 @@
+star_treks := [
+ (title: "Voyager", popularity: "97"),
+ (title: "Enterprise", popularity: "99"),
+ (title: "Original", popularity: "69")
+];
+
+fetch_star_treks() :=
+SELECT
+    title, popularity
+FROM star_treks
+ORDER BY popularity DESC;
