@@ -1,0 +1,36 @@
+user_ratings(user: String) := READ_JSON[collection(record(name: string, points: collection(collection(int))))]("https://lichess.org/api/user/" + user + "/rating-history")
+
+rating_history(user: String) := select name, points FROM user_ratings(user) WHERE CCOUNT(points) > 0
+
+average_stats := \ python (history: collection(record(name: string, points: collection(collection(int)))), game: String): collection(record(month: String, rating:int)) -> $$$
+    
+    from itertools import groupby
+    from statistics import mean
+    
+    res = {}
+    
+    for each in history:
+    	if (len(each['points']) > 0):
+            game_type = each['name']
+            vals = each['points']
+            ratings_all = {}
+            ratings_avg = []
+            for month, g in groupby(vals, key=lambda x: str(x[0]) + "-" + str(1 + x[1])):
+                ratings_all[month] = [pack[3] for pack in list(g)]
+                all_ratings_for_the_month = ratings_all[month]
+                avg_rating_of_the_month = int(mean(all_ratings_for_the_month))
+                ratings_avg.append({'month': month, 'rating': avg_rating_of_the_month})
+            res[game_type] = ratings_avg
+
+    return res[game]
+$$$
+
+
+// user: lichess username
+// type: {Rapid, Classical, Blitz, Correspondence, Puzzles}
+user_monthly_stats_of_game_type(user: String, type: String) := {
+    history := rating_history(user)
+    select * from average_stats(history, type)
+}
+
+//select * from user_monthly_stats_of_game_type("DrDrunkenstein", "Bullet")

@@ -1,0 +1,15 @@
+raw: 0.9
+endpoint: GET
+metadata:
+  title: lichess ratings 
+  description: ratings of user on lichess per year-month
+  tags:
+    - chess  
+code: rql
+codeFile: code.rql
+declaration: user_monthly_stats_of_game_type
+security: 
+  public: true
+format: json
+computeClass: normal
+enabled: true
