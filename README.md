@@ -1,3 +1,3 @@
 # didactic-rotary-phone
 
-intended for 'testing' reader and locally bootstraping repo. Trying smth.
+intended for 'testing' reader and locally bootstraping repo. Trying smth again.
