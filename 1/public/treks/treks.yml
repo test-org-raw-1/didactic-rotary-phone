@@ -9,9 +9,7 @@ code: rql
 codeFile: code.rql
 declaration: fetch_star_treks
 security:
-  public: false
-  scopes:
-    - didactic:ratings
+  public: true
 format: json
 computeClass: normal
 enabled: true
