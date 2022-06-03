@@ -9,7 +9,8 @@ code: rql
 codeFile: code.rql
 declaration: fetch_star_treks
 security:
-  public: true
+  public: false
+  scopes: treki
 format: json
 computeClass: normal
 enabled: true
