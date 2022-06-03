@@ -8,4 +8,4 @@ fetch_star_treks() :=
 SELECT
     title, popularity
 FROM star_treks
-ORDER BY popularity DESC;
+ORDER BY popularity ASC;
