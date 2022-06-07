@@ -1,7 +1,8 @@
 star_treks := [
  (title: "Voyager", popularity: "97"),
  (title: "Enterprise", popularity: "99"),
- (title: "Original", popularity: "69")
+ (title: "Original", popularity: "69"),
+ (title: "Strange New Worlds", popularity: "88")
 ];
 
 fetch_star_treks() :=
