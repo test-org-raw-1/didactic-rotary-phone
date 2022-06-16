@@ -12,7 +12,7 @@ security:
   public: false
   scopes:
     - treki
-    - boldly
+    - boldly:go
 format: json
 computeClass: normal
 enabled: true
