@@ -6,6 +6,7 @@ metadata:
   tags:
     - trek
     - scifi
+    - enterpise
 code: rql
 codeFile: code.rql
 declaration: fetch_star_treks
