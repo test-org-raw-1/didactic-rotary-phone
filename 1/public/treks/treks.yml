@@ -5,6 +5,7 @@ metadata:
   description: get treks 
   tags:
     - trek
+    - scifi
 code: rql
 codeFile: code.rql
 declaration: fetch_star_treks
