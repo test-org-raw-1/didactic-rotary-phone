@@ -16,6 +16,7 @@ security:
     - treki
     - boldly:go
     - enterprise
+    - spock
 format: json
 computeClass: normal
 enabled: true
