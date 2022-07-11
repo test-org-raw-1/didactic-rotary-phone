@@ -17,6 +17,7 @@ security:
     - boldly:go
     - enterprise
     - spock
+    - entity:q
 format: json
 computeClass: normal
 enabled: true
