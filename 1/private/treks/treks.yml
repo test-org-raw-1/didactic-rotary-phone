@@ -15,5 +15,4 @@ security:
 format: json
 computeClass: normal
 enabled: true
-refreshCron: "*/30 * * * * ?"
-buildOnPublish: false
+
