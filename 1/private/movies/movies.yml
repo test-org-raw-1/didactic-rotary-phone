@@ -1,0 +1,15 @@
+raw: 0.9
+endpoint: GET
+metadata:
+  title: get top n movies
+  description: get top n movies 
+  tags:
+    - movies
+code: rql
+codeFile: code.rql
+declaration: fetch_top_n_movies
+security:
+  public: true
+format: json
+computeClass: normal
+enabled: true
