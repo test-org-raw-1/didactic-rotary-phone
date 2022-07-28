@@ -21,3 +21,4 @@ security:
 format: json
 computeClass: normal
 enabled: true
+expireSeconds: 3600
