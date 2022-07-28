@@ -5,8 +5,16 @@ star_treks := [
  (title: "Strange New Worlds", popularity: "88")
 ];
 
+
+movies := read("https://raw.githubusercontent.com/prust/wikipedia-movie-data/master/movies.json",  cache := interval "1 day");
+
 fetch_star_treks() :=
 SELECT
     title, popularity
 FROM star_treks
 ORDER BY popularity ASC;
+
+
+fetch_top_n_movies(n: integer) := {
+ SELECT * FROM movies LIMIT n;
+}
