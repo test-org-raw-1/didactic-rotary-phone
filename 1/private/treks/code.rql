@@ -15,10 +15,10 @@ FROM star_treks
 ORDER BY popularity ASC;
 
 
-fetch_top_n_movies(n: integer) := {
- SELECT * FROM movies LIMIT n;
+fetch_top_n_star_treks(n: integer) := {
+ SELECT * FROM fetch_star_treks() LIMIT n;
 }
 
-fetch_top_n_movies_m_popularity(n: integer, m: string) := {
- SELECT * FROM movies WHERE popularity = m LIMIT n;
+fetch_top_n_star_treks_m_popularity(n: integer, m: string) := {
+ SELECT * FROM fetch_star_treks() WHERE popularity = m LIMIT n;
 }
