@@ -16,9 +16,9 @@ ORDER BY popularity ASC;
 
 
 fetch_top_n_star_treks(n: integer) := {
- SELECT * FROM fetch_star_treks() LIMIT n;
+ SELECT * FROM fetch_star_treks() LIMIT n
 }
 
 fetch_top_n_star_treks_m_popularity(n: integer, m: string) := {
- SELECT * FROM fetch_star_treks() WHERE popularity = m LIMIT n;
+ SELECT * FROM fetch_star_treks() WHERE popularity = m LIMIT n
 }
