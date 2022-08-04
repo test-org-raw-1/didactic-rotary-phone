@@ -9,7 +9,7 @@ metadata:
     - enterpise
 code: rql
 codeFile: code.rql
-declaration: fetch_top_n_star_treks_m_popularity
+declaration: fetch_top_limit_star_treks_popularity
 security:
   public: false
   scopes:
