@@ -18,3 +18,7 @@ ORDER BY popularity ASC;
 fetch_top_n_movies(n: integer) := {
  SELECT * FROM movies LIMIT n;
 }
+
+fetch_top_n_movies_m_popularity(n: integer, m: string) := {
+ SELECT * FROM movies WHERE popularity = m LIMIT n;
+}
