@@ -6,7 +6,7 @@ star_treks := [
 ];
 
 
-movies := read("https://raw.githubusercontent.com/prust/wikipedia-movie-data/master/movies.json",  cache := interval "1 day");
+// movies := read("https://raw.githubusercontent.com/prust/wikipedia-movie-data/master/movies.json",  cache := interval "1 day");
 
 fetch_star_treks() :=
 SELECT
